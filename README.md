@@ -1,2 +1,2 @@
 This code is used for experiments in the paper entitled "Some new accelerated and stochastic gradient descent algorithms
-based on locally Lipschitz gradient constants" by paper Nguyen Phung Hai Chung, Pham Thi Hoai and Hoang Van Chung. 
+based on locally Lipschitz gradient constants" by paper Nguyen Phung Hai Chung, Pham Thi Hoai and Hoang Van Chung. The Authors would like to thank Professor Y. Malitsky and K. Mishchenko for their public repository at https://github.com/ymalitsky/adaptive_GD which helps the authors to construct this code.
