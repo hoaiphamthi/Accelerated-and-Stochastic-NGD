@@ -29,7 +29,6 @@ class Gd(Trainer):
         super(Gd, self).update_logs()
         self.grads.append(la.norm(self.grad_func(self.w)))
 
-
 class Nesterov(Trainer):
     """
     Nesterov's accelerated gradient descent with constant learning rate.
@@ -120,7 +119,6 @@ class HeavyBall(Trainer):
         self.lrs.append(self.lr)
         self.grads.append(la.norm(self.grad_func(self.w)))
         
-
 
 class NGDh(Trainer):
     def __init__(self, lr0=None, eta0=None, eta1=None, beta=None, alpha=None, gamma=None, *args, **kwargs):
@@ -234,8 +232,9 @@ class NGDn(Trainer):
         self.w_old = self.w.copy()
         self.grad_old = grad
         self.grads = [la.norm(self.grad_old)]
-        self.v = self.gamma * self.v + self.lr * grad
-        self.w -= (self.v * self.gamma + self.lr * grad)
+        self.v = 0
+     
+        self.w -= self.lr * grad
         self.save_checkpoint()
 
     def update_logs(self):
